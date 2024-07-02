@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    height: 50%;
+    width: 50%;
+}
+
+.titulo {
+    flex: 2;
+    text-align: center;
+}
+
+.menu {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.menu a:hover {
+    background-color: #3e8e41;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* pega 100% do height do elemento pai (elemento header, no caso) */
+        left: 0;
+        background-color: #4CAF50;
+    }
+
+    .logo img {
+        height: auto;
+    }
+
+    .menu a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #3e8e41;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #menuToggle:checked ~ .menu {
+        display: flex;
+    }
+}
+
+#menuToggle {
+    display: none;
+}
