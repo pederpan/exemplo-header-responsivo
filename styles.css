@@ -1,3 +1,9 @@
+:root {
+    --header: #4CAF50;
+    --mouse-em-cima: #3e8e41;
+    --color-menu: white;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: var(--header);
     color: white;
     position: relative;
 }
@@ -35,13 +41,13 @@ header {
 }
 
 .menu a {
-    color: white;
+    color: var(--color-menu);
     text-decoration: none;
     padding: 8px 16px;
 }
 
 .menu a:hover {
-    background-color: #3e8e41;
+    background-color: var(--mouse-em-cima);
     border-radius: 4px;
 }
 
@@ -51,7 +57,7 @@ header {
     border: none;
     cursor: pointer;
     font-size: 24px;
-    color: white;
+    color: var(--color-menu);
 }
 
 @media (max-width: 768px) {
@@ -62,7 +68,7 @@ header {
         position: absolute;
         top: 100%; /* pega 100% do height do elemento pai (elemento header, no caso) */
         left: 0;
-        background-color: #4CAF50;
+        background-color: var(--header);
     }
 
     .logo img {
@@ -72,7 +78,7 @@ header {
     .menu a {
         text-align: center;
         padding: 10px;
-        border-top: 1px solid #3e8e41;
+        border-top: 1px solid var(--mouse-em-cima);
     }
 
     .hamburger {
