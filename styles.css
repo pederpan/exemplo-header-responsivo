@@ -1,7 +1,8 @@
 :root {
-    --header: #4CAF50;
-    --mouse-em-cima: #3e8e41;
-    --color-menu: white;
+    --cor-header: #4CAF50;
+    --cor-letra-header: white;
+    --hover: #3e8e41;
+    --cor-menu: white;
 }
 
 body {
@@ -15,8 +16,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: var(--header);
-    color: white;
+    background-color: var(--cor-header);
+    color: var(--cor-letra-header);
     position: relative;
 }
 
@@ -41,13 +42,13 @@ header {
 }
 
 .menu a {
-    color: var(--color-menu);
+    color: var(--cor-letra-header);
     text-decoration: none;
     padding: 8px 16px;
 }
 
 .menu a:hover {
-    background-color: var(--mouse-em-cima);
+    background-color: var(--hover);
     border-radius: 4px;
 }
 
@@ -57,7 +58,7 @@ header {
     border: none;
     cursor: pointer;
     font-size: 24px;
-    color: var(--color-menu);
+    color: var(--cor-menu);
 }
 
 @media (max-width: 768px) {
@@ -66,9 +67,10 @@ header {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 100%; /* pega 100% do height do elemento pai (elemento header, no caso) */
+        top: 100%;
+        /* pega 100% do height do elemento pai (elemento header, no caso) */
         left: 0;
-        background-color: var(--header);
+        background-color: var(--cor-header);
     }
 
     .logo img {
@@ -78,14 +80,14 @@ header {
     .menu a {
         text-align: center;
         padding: 10px;
-        border-top: 1px solid var(--mouse-em-cima);
+        border-top: 1px solid var(--hover);
     }
 
     .hamburger {
         display: block;
     }
 
-    #menuToggle:checked ~ .menu {
+    #menuToggle:checked~.menu {
         display: flex;
     }
 }
